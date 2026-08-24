@@ -18,6 +18,22 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Cloudflare deploy
+
+This site deploys to Cloudflare Workers via `@opennextjs/cloudflare`.
+
+```bash
+npm run build:worker   # next build + OpenNext adapter → .open-next/worker.js
+npm run deploy         # build:worker + wrangler deploy
+```
+
+In **Workers Builds** settings, set:
+
+- **Build command:** `npm run build:worker`
+- **Deploy command:** `npx wrangler deploy`
+
+Do **not** use `npm run build` as the CF build command alone — that only runs `next build` and will not create `.open-next/worker.js`.
+
 ## Site map
 
 - `/` — Home

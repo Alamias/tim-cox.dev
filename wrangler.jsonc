@@ -11,8 +11,7 @@
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      // Must match "name" above — package.json "tim-cox.dev" was producing
-      // a mismatched service id (tim-coxdev) vs worker script (tim-cox-dev).
+      // Must match "name" above
       "service": "tim-cox-dev"
     }
   ],

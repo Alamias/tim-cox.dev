@@ -23,6 +23,7 @@ export function ArchiveGallery({
   const dialogRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
   const descId = useId();
+  const touchStartX = useRef<number | null>(null);
 
   const active = activeIndex === null ? null : images[activeIndex];
 
@@ -104,11 +105,11 @@ export function ArchiveGallery({
               type="button"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
+              viewport={{ once: true, margin: "-12px" }}
               transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.4) }}
               whileHover={{ y: -4 }}
               onClick={() => setActiveIndex(index)}
-              className="gallery-frame group w-full overflow-hidden rounded-lg text-left"
+              className="gallery-frame group w-full min-h-11 overflow-hidden rounded-lg text-left"
               aria-label={`Open screenshot: ${image.title}, ${image.year}`}
             >
               <div className="relative aspect-[16/10] bg-canvas-deep">
@@ -133,7 +134,7 @@ export function ArchiveGallery({
       <AnimatePresence>
         {active && activeIndex !== null && (
           <motion.div
-            className="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
+            className="fixed inset-0 z-[80] flex items-end justify-center bg-black/80 p-0 backdrop-blur-sm sm:items-center sm:p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -150,10 +151,20 @@ export function ArchiveGallery({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: 10 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-              className="relative max-h-[90vh] w-full max-w-5xl overflow-hidden rounded-lg border border-line bg-canvas-deep shadow-2xl"
+              className="relative flex max-h-[100dvh] w-full max-w-5xl flex-col overflow-hidden rounded-none border-0 border-line bg-canvas-deep shadow-2xl sm:max-h-[90vh] sm:rounded-lg sm:border"
               onClick={(e) => e.stopPropagation()}
+              onTouchStart={(e) => {
+                touchStartX.current = e.changedTouches[0]?.clientX ?? null;
+              }}
+              onTouchEnd={(e) => {
+                if (touchStartX.current === null) return;
+                const dx = (e.changedTouches[0]?.clientX ?? 0) - touchStartX.current;
+                touchStartX.current = null;
+                if (dx > 50) goPrev();
+                else if (dx < -50) goNext();
+              }}
             >
-              <div className="relative aspect-[16/10] max-h-[70vh] bg-canvas">
+              <div className="relative h-[min(58svh,24rem)] bg-canvas sm:h-auto sm:aspect-[16/10] sm:max-h-[70vh]">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={active.id}
@@ -168,7 +179,7 @@ export function ArchiveGallery({
                       alt={`${company} website screenshot: ${active.title}`}
                       fill
                       className="object-contain object-top"
-                      sizes="90vw"
+                      sizes="100vw"
                       priority
                     />
                   </motion.div>
@@ -179,7 +190,7 @@ export function ArchiveGallery({
                     <button
                       type="button"
                       onClick={goPrev}
-                      className="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-md border border-line bg-canvas/90 text-ink transition hover:border-accent hover:bg-accent hover:text-white"
+                      className="absolute left-2 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-md border border-line bg-canvas/90 text-ink transition hover:border-accent hover:bg-accent hover:text-white sm:left-3 sm:h-11 sm:w-11"
                       aria-label="Previous screenshot"
                     >
                       <span aria-hidden className="text-xl leading-none">
@@ -189,7 +200,7 @@ export function ArchiveGallery({
                     <button
                       type="button"
                       onClick={goNext}
-                      className="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-md border border-line bg-canvas/90 text-ink transition hover:border-accent hover:bg-accent hover:text-white"
+                      className="absolute right-2 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-md border border-line bg-canvas/90 text-ink transition hover:border-accent hover:bg-accent hover:text-white sm:right-3 sm:h-11 sm:w-11"
                       aria-label="Next screenshot"
                     >
                       <span aria-hidden className="text-xl leading-none">
@@ -200,8 +211,8 @@ export function ArchiveGallery({
                 )}
               </div>
 
-              <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line px-5 py-4">
-                <div>
+              <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-5">
+                <div className="min-w-0 flex-1">
                   <p id={titleId} className="font-semibold text-ink">
                     {active.title}
                   </p>
@@ -211,8 +222,8 @@ export function ArchiveGallery({
                       ? ` · ${activeIndex + 1} of ${images.length}`
                       : ""}
                     <span className="sr-only">
-                      . Use left and right arrow keys to navigate. Press Escape to
-                      close.
+                      . Swipe or use left and right arrow keys to navigate. Press
+                      Escape to close.
                     </span>
                   </p>
                 </div>
@@ -226,7 +237,7 @@ export function ArchiveGallery({
                     ref={closeRef}
                     type="button"
                     onClick={close}
-                    className="rounded-md bg-ink px-3 py-2 text-sm font-medium text-canvas transition hover:bg-accent hover:text-white"
+                    className="min-h-11 rounded-md bg-ink px-4 py-2 text-sm font-medium text-canvas transition hover:bg-accent hover:text-white"
                   >
                     Close
                   </button>

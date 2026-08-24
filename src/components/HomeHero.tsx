@@ -43,17 +43,17 @@ export function HomeHero() {
         />
       </div>
 
-      <div className="mx-auto flex min-h-[calc(100vh-4.5rem)] max-w-6xl flex-col justify-center px-5 py-20 sm:px-8">
+      <div className="site-gutter mx-auto flex min-h-[min(100svh,40rem)] max-w-6xl flex-col justify-center py-14 sm:min-h-[calc(100svh-4.5rem)] sm:py-20">
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-accent"
+          className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-accent sm:mb-6 sm:text-sm sm:tracking-[0.24em]"
         >
           {profile.title}
         </motion.p>
 
-        <h1 className="font-display max-w-4xl text-[clamp(3.25rem,11vw,7rem)] font-semibold leading-[0.9] tracking-[-0.03em] text-ink">
+        <h1 className="font-display max-w-4xl text-[clamp(2.75rem,14vw,7rem)] font-semibold leading-[0.9] tracking-[-0.03em] text-ink">
           {nameWords.map((word, i) => (
             <motion.span
               key={word}
@@ -84,7 +84,7 @@ export function HomeHero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-7 max-w-xl text-lg leading-relaxed text-ink-muted sm:text-xl"
+          className="mt-6 max-w-xl text-base leading-relaxed text-ink-muted sm:mt-7 sm:text-xl"
         >
           {profile.tagline}
         </motion.p>
@@ -93,23 +93,23 @@ export function HomeHero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.48 }}
-          className="mt-10 flex flex-wrap gap-3"
+          className="mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:flex-wrap"
         >
           <Link
             href="/work"
-            className="btn-primary inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold text-canvas transition hover:bg-accent-deep"
+            className="btn-primary inline-flex min-h-11 w-full items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold text-canvas transition hover:bg-accent-deep sm:w-auto"
           >
             View work
           </Link>
           <Link
             href="/resume"
-            className="inline-flex items-center justify-center rounded-md border border-line bg-canvas-deep/80 px-6 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent/40 hover:bg-canvas-deep"
+            className="inline-flex min-h-11 w-full items-center justify-center rounded-md border border-line bg-canvas-deep/80 px-6 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent/40 hover:bg-canvas-deep sm:w-auto"
           >
             Resume
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-md border border-line bg-canvas-deep/80 px-6 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent/40 hover:bg-canvas-deep"
+            className="inline-flex min-h-11 w-full items-center justify-center rounded-md border border-line bg-canvas-deep/80 px-6 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent/40 hover:bg-canvas-deep sm:w-auto"
           >
             Get in touch
           </Link>

@@ -10,17 +10,17 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Work</p>
-      <h1 className="font-display mt-3 max-w-3xl text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+    <div className="site-gutter mx-auto max-w-6xl py-12 sm:py-20">
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent sm:text-sm sm:tracking-[0.2em]">Work</p>
+      <h1 className="font-display mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-balance text-ink sm:text-5xl">
         Experience across games, genetics, and entertainment
       </h1>
-      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-muted">
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted sm:mt-5 sm:text-lg">
         Each company page includes role highlights and a gallery of historical site
         screenshots from the years Tim was there.
       </p>
 
-      <div className="mt-14 grid gap-12 lg:grid-cols-2">
+      <div className="mt-10 grid gap-8 sm:mt-14 sm:gap-12 lg:grid-cols-2">
         {experiences.map((exp, index) => (
           <ExperienceCard key={exp.slug} experience={exp} index={index} />
         ))}

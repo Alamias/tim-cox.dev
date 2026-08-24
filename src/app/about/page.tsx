@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-20">
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">About</p>
-      <h1 className="font-display mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+    <div className="site-gutter mx-auto max-w-3xl py-12 sm:py-20">
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent sm:text-sm sm:tracking-[0.2em]">About</p>
+      <h1 className="font-display mt-3 text-3xl font-semibold tracking-tight text-balance text-ink sm:text-5xl">
         Building interfaces that scale with the people who use them
       </h1>
 

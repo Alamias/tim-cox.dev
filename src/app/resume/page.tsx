@@ -10,24 +10,24 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-20">
+    <div className="site-gutter mx-auto max-w-3xl py-12 sm:py-20">
       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
         Resume
       </p>
-      <h1 className="font-display mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+      <h1 className="font-display mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-5xl">
         {resume.name}
       </h1>
       <p className="mt-2 text-lg text-ink-muted">{resume.title}</p>
-      <p className="mt-3 text-sm text-ink-faint">
+      <p className="mt-3 flex flex-col gap-1 text-sm text-ink-faint sm:block">
         {resume.location}
-        {" · "}
+        <span className="hidden sm:inline"> · </span>
         <a
           href={`mailto:${resume.email}`}
           className="text-accent hover:text-accent-deep"
         >
           {resume.email}
         </a>
-        {" · "}
+        <span className="hidden sm:inline"> · </span>
         <a
           href={resume.linkedin}
           target="_blank"
@@ -38,18 +38,18 @@ export default function ResumePage() {
         </a>
       </p>
 
-      <div className="mt-8 flex flex-wrap gap-3">
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <a
           href={resumeFiles.pdf}
           download="Tim-Cox-Resume.pdf"
-          className="inline-flex items-center justify-center rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-canvas transition hover:bg-accent-deep"
+          className="inline-flex min-h-11 items-center justify-center rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-canvas transition hover:bg-accent-deep"
         >
           Download PDF
         </a>
         <a
           href={resumeFiles.docx}
           download="Tim-Cox-Resume.docx"
-          className="inline-flex items-center justify-center rounded-md border border-line bg-canvas-deep/80 px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-accent/40 hover:bg-canvas-deep"
+          className="inline-flex min-h-11 items-center justify-center rounded-md border border-line bg-canvas-deep/80 px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-accent/40 hover:bg-canvas-deep"
         >
           Download DOCX
         </a>
@@ -57,7 +57,7 @@ export default function ResumePage() {
           href={resumeFiles.pdf}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-md border border-line px-5 py-2.5 text-sm font-semibold text-ink-muted transition hover:text-ink"
+          className="inline-flex min-h-11 items-center justify-center rounded-md border border-line px-5 py-2.5 text-sm font-semibold text-ink-muted transition hover:text-ink"
         >
           Open PDF
         </a>

@@ -61,20 +61,20 @@ export default async function ExperiencePage({ params }: Props) {
           )}
         </div>
 
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+        <div className="site-gutter mx-auto max-w-6xl py-12 sm:py-24">
           <Link
             href="/work"
-            className="text-sm font-semibold text-accent transition hover:text-accent-deep"
+            className="inline-flex min-h-11 items-center text-sm font-semibold text-accent transition hover:text-accent-deep"
           >
             ← All work
           </Link>
-          <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-accent sm:mt-8 sm:text-sm sm:tracking-[0.2em]">
             {exp.period}
           </p>
-          <h1 className="font-display mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-6xl">
+          <h1 className="font-display mt-3 text-3xl font-semibold tracking-tight text-balance text-ink sm:text-6xl">
             {exp.company}
           </h1>
-          <p className="mt-3 text-lg text-ink-muted sm:text-xl">
+          <p className="mt-3 text-base text-ink-muted sm:text-xl">
             {exp.role}
             <span className="text-ink-faint"> · {exp.location}</span>
           </p>
@@ -84,7 +84,7 @@ export default async function ExperiencePage({ params }: Props) {
         </div>
       </header>
 
-      <div className="mx-auto grid max-w-6xl gap-14 px-5 py-14 sm:px-8 lg:grid-cols-[1fr_280px]">
+      <div className="site-gutter mx-auto grid max-w-6xl gap-10 py-10 sm:gap-14 sm:py-14 lg:grid-cols-[1fr_280px]">
         <div>
           <h2 className="font-display text-2xl font-semibold text-ink">Highlights</h2>
           <ul className="mt-6 space-y-4">
@@ -148,11 +148,11 @@ export default async function ExperiencePage({ params }: Props) {
       </div>
 
       <section className="border-t border-line bg-canvas-deep/40">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+        <div className="site-gutter mx-auto max-w-6xl py-12 sm:py-16">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent sm:text-sm sm:tracking-[0.2em]">
             Screenshot gallery
           </p>
-          <h2 className="font-display mt-2 text-3xl font-semibold tracking-tight text-ink">
+          <h2 className="font-display mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
             Sites from the {exp.shortName} years
           </h2>
           <p className="mt-3 max-w-2xl text-ink-muted">
@@ -160,7 +160,7 @@ export default async function ExperiencePage({ params }: Props) {
             platforms behind them.
           </p>
           {exp.gallerySections && exp.gallerySections.length > 0 ? (
-            <div className="mt-12 space-y-16">
+            <div className="mt-10 space-y-12 sm:mt-12 sm:space-y-16">
               {exp.gallerySections.map((section) => (
                 <div key={section.id} id={`gallery-${section.id}`}>
                   <h3 className="font-display text-xl font-semibold tracking-tight text-ink sm:text-2xl">
@@ -180,11 +180,11 @@ export default async function ExperiencePage({ params }: Props) {
         </div>
       </section>
 
-      <nav className="mx-auto flex max-w-6xl justify-between gap-4 px-5 py-12 sm:px-8">
+      <nav className="site-gutter mx-auto flex max-w-6xl justify-between gap-4 py-10 sm:py-12">
         {prev ? (
-          <Link href={`/work/${prev.slug}`} className="group max-w-[45%]">
+          <Link href={`/work/${prev.slug}`} className="group min-w-0 max-w-[48%]">
             <span className="text-xs uppercase tracking-wider text-ink-faint">Previous</span>
-            <span className="mt-1 block font-display text-lg font-semibold text-ink transition group-hover:text-accent">
+            <span className="mt-1 block font-display text-base font-semibold leading-snug text-ink transition group-hover:text-accent sm:text-lg">
               ← {prev.company}
             </span>
           </Link>
@@ -192,9 +192,9 @@ export default async function ExperiencePage({ params }: Props) {
           <span />
         )}
         {next ? (
-          <Link href={`/work/${next.slug}`} className="group max-w-[45%] text-right">
+          <Link href={`/work/${next.slug}`} className="group min-w-0 max-w-[48%] text-right">
             <span className="text-xs uppercase tracking-wider text-ink-faint">Next</span>
-            <span className="mt-1 block font-display text-lg font-semibold text-ink transition group-hover:text-accent">
+            <span className="mt-1 block font-display text-base font-semibold leading-snug text-ink transition group-hover:text-accent sm:text-lg">
               {next.company} →
             </span>
           </Link>

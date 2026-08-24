@@ -18,7 +18,7 @@ export function ExperienceCard({
     <motion.article
       initial={{ opacity: 0, y: 36 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-12px" }}
       transition={{ duration: 0.55, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       className="group"
     >
@@ -41,7 +41,10 @@ export function ExperienceCard({
                 }}
               />
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/15 to-transparent opacity-90 transition duration-500 group-hover:opacity-100" />
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/20"
+              aria-hidden
+            />
             <motion.div
               className="absolute left-0 top-0 h-full w-1 bg-accent origin-top"
               initial={{ scaleY: 0 }}
@@ -49,14 +52,16 @@ export function ExperienceCard({
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.15 + index * 0.05 }}
             />
-            <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/75">
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-white/80 sm:text-xs sm:tracking-[0.18em]">
                 {experience.period}
               </p>
-              <h3 className="font-display mt-1 text-2xl font-semibold text-white sm:text-3xl">
+              <h3 className="font-display mt-1 text-xl font-semibold leading-tight text-balance text-white sm:text-3xl">
                 {experience.company}
               </h3>
-              <p className="mt-1 text-sm text-white/85">{experience.role}</p>
+              <p className="mt-1 text-xs leading-snug text-white/90 sm:text-sm">
+                {experience.role}
+              </p>
             </div>
           </div>
         </div>

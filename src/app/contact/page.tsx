@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-20">
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Contact</p>
-      <h1 className="font-display mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+    <div className="site-gutter mx-auto max-w-3xl py-12 sm:py-20">
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent sm:text-sm sm:tracking-[0.2em]">Contact</p>
+      <h1 className="font-display mt-3 text-3xl font-semibold tracking-tight text-balance text-ink sm:text-5xl">
         Let&apos;s talk about the next frontend challenge
       </h1>
-      <p className="mt-5 text-lg leading-relaxed text-ink-muted">
+      <p className="mt-5 text-base leading-relaxed text-ink-muted sm:text-lg">
         I&apos;m interested in Senior Frontend roles (and frontend-leaning full-stack) —
         remote, or hybrid/on-site within commuting distance of Ontario, California.
       </p>

@@ -31,6 +31,7 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  overflow-x: clip;
 }
 
 body {
@@ -39,9 +40,30 @@ body {
     radial-gradient(ellipse 90% 55% at 8% -10%, rgba(91, 140, 255, 0.16), transparent 55%),
     radial-gradient(ellipse 70% 45% at 100% 0%, rgba(56, 189, 248, 0.08), transparent 50%),
     linear-gradient(180deg, #0e1118 0%, var(--canvas) 45%, #080a0e 100%);
-  background-attachment: fixed;
   color: var(--ink);
   font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.site-gutter {
+  padding-left: max(1.25rem, env(safe-area-inset-left));
+  padding-right: max(1.25rem, env(safe-area-inset-right));
+}
+
+@media (min-width: 640px) {
+  .site-gutter {
+    padding-left: max(2rem, env(safe-area-inset-left));
+    padding-right: max(2rem, env(safe-area-inset-right));
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-attachment: fixed;
+  }
 }
 
 ::selection {
@@ -78,10 +100,12 @@ body {
     border-color 0.3s ease;
 }
 
-.gallery-frame:hover {
-  transform: translateY(-4px);
-  border-color: rgba(91, 140, 255, 0.35);
-  box-shadow: 0 28px 50px -24px rgba(0, 0, 0, 0.75);
+@media (hover: hover) and (pointer: fine) {
+  .gallery-frame:hover {
+    transform: translateY(-4px);
+    border-color: rgba(91, 140, 255, 0.35);
+    box-shadow: 0 28px 50px -24px rgba(0, 0, 0, 0.75);
+  }
 }
 
 .btn-primary {
@@ -123,6 +147,11 @@ body {
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+a,
+button {
+  touch-action: manipulation;
 }
 
 .skip-link {

@@ -8,8 +8,8 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 border-t border-line bg-canvas-deep/40">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-end sm:justify-between sm:px-8">
+    <footer className="mt-16 border-t border-line bg-canvas-deep/40 sm:mt-24">
+      <div className="site-gutter mx-auto flex max-w-6xl flex-col gap-6 py-10 sm:flex-row sm:items-end sm:justify-between">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}

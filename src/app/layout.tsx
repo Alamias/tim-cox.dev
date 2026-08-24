@@ -40,8 +40,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${fraunces.variable} ${manrope.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-canvas text-ink">
+      <body
+        className="min-h-full flex flex-col bg-canvas text-ink"
+        suppressHydrationWarning
+      >
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

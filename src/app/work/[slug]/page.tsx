@@ -159,9 +159,24 @@ export default async function ExperiencePage({ params }: Props) {
             Marketing and player-facing pages as they looked while Tim worked on the web
             platforms behind them.
           </p>
-          <div className="mt-10">
-            <ArchiveGallery images={exp.gallery} company={exp.company} />
-          </div>
+          {exp.gallerySections && exp.gallerySections.length > 0 ? (
+            <div className="mt-12 space-y-16">
+              {exp.gallerySections.map((section) => (
+                <div key={section.id} id={`gallery-${section.id}`}>
+                  <h3 className="font-display text-xl font-semibold tracking-tight text-ink sm:text-2xl">
+                    {section.title}
+                  </h3>
+                  <div className="mt-6">
+                    <ArchiveGallery images={section.images} company={exp.company} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="mt-10">
+              <ArchiveGallery images={exp.gallery} company={exp.company} />
+            </div>
+          )}
         </div>
       </section>
 

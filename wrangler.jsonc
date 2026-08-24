@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tim-cox-dev",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-08-24",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      // Must match "name" above — package.json "tim-cox.dev" was producing
+      // a mismatched service id (tim-coxdev) vs worker script (tim-cox-dev).
+      "service": "tim-cox-dev"
+    }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

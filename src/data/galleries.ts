@@ -1,4 +1,4 @@
-import type { GalleryImage } from "./types";
+import type { GalleryImage, GallerySection } from "./types";
 
 /** Historical site screenshots from employment windows */
 export const galleries: Record<string, GalleryImage[]> = {
@@ -539,185 +539,521 @@ export const galleries: Record<string, GalleryImage[]> = {
     }
   ],
   "soe": [
-    {
-      "id": "dcuo-2011",
-      "title": "DC Universe Online — Home",
-      "year": "2011",
-      "src": "/galleries/soe/dcuo-2011.jpg"
-    },
-    {
-      "id": "dcuo-news-2011",
-      "title": "DC Universe Online — News",
-      "year": "2011",
-      "src": "/galleries/soe/dcuo-news-2011.jpg"
-    },
-    {
-      "id": "eq-2001",
-      "title": "EverQuest — Home",
-      "year": "2001",
-      "src": "/galleries/soe/eq-2001.jpg"
-    },
-    {
-      "id": "eq-2005",
-      "title": "EverQuest — Home",
-      "year": "2005",
-      "src": "/galleries/soe/eq-2005.jpg"
-    },
-    {
-      "id": "eq-2010",
-      "title": "EverQuest — Home",
-      "year": "2010",
-      "src": "/galleries/soe/eq-2010.jpg"
-    },
-    {
-      "id": "eq-2014",
-      "title": "EverQuest — Home",
-      "year": "2014",
-      "src": "/galleries/soe/eq-2014.jpg"
-    },
-    {
-      "id": "eq-media-2012",
-      "title": "EverQuest — Media",
-      "year": "2012",
-      "src": "/galleries/soe/eq-media-2012.jpg"
-    },
-    {
-      "id": "eq-news-2012",
-      "title": "EverQuest — News",
-      "year": "2012",
-      "src": "/galleries/soe/eq-news-2012.jpg"
-    },
-    {
-      "id": "eq2-2008",
-      "title": "EverQuest II — Home",
-      "year": "2008",
-      "src": "/galleries/soe/eq2-2008.jpg"
-    },
-    {
-      "id": "eq2-2012",
-      "title": "EverQuest II — Home",
-      "year": "2012",
-      "src": "/galleries/soe/eq2-2012.jpg"
-    },
-    {
-      "id": "eq2-home-2012",
-      "title": "EverQuest II — Home",
-      "year": "2012",
-      "src": "/galleries/soe/eq2-home-2012.jpg"
-    },
-    {
-      "id": "eq2-news-2010",
-      "title": "EverQuest II — News",
-      "year": "2010",
-      "src": "/galleries/soe/eq2-news-2010.jpg"
-    },
-    {
-      "id": "eq2players-2008",
-      "title": "EQ2 Players",
-      "year": "2008",
-      "src": "/galleries/soe/eq2players-2008.jpg"
-    },
-    {
-      "id": "eqplayers-2008",
-      "title": "EQ Players — Home",
-      "year": "2008",
-      "src": "/galleries/soe/eqplayers-2008.jpg"
-    },
-    {
-      "id": "eqplayers-chars-2008",
-      "title": "EQ Players — Characters",
-      "year": "2008",
-      "src": "/galleries/soe/eqplayers-chars-2008.jpg"
-    },
-    {
-      "id": "eqplayers-services-2008",
-      "title": "EQ Players — Services",
-      "year": "2008",
-      "src": "/galleries/soe/eqplayers-services-2008.jpg"
-    },
-    {
-      "id": "freerealms-2010",
-      "title": "Free Realms — Home",
-      "year": "2010",
-      "src": "/galleries/soe/freerealms-2010.jpg"
-    },
-    {
-      "id": "planetside2-2012",
-      "title": "PlanetSide 2 — Home",
-      "year": "2012",
-      "src": "/galleries/soe/planetside2-2012.jpg"
-    },
-    {
-      "id": "ps2-news-2012",
-      "title": "PlanetSide 2 — News",
-      "year": "2012",
-      "src": "/galleries/soe/ps2-news-2012.jpg"
-    },
-    {
-      "id": "station-2005",
-      "title": "Station.com — Home",
-      "year": "2005",
-      "src": "/galleries/soe/station-2005.jpg"
-    },
-    {
-      "id": "station-2007",
-      "title": "SOE / Station — About",
-      "year": "2007",
-      "src": "/galleries/soe/station-2007.jpg"
-    },
-    {
-      "id": "station-2011",
-      "title": "Station.com — Home",
-      "year": "2011",
-      "src": "/galleries/soe/station-2011.jpg"
-    },
-    {
-      "id": "station-store-2008",
-      "title": "Station Store",
-      "year": "2008",
-      "src": "/galleries/soe/station-store-2008.jpg"
-    },
-    {
-      "id": "swg-2003",
-      "title": "Star Wars Galaxies — Home",
-      "year": "2003",
-      "src": "/galleries/soe/swg-2003.jpg"
-    },
-    {
-      "id": "swg-2005",
-      "title": "Star Wars Galaxies — Home",
-      "year": "2005",
-      "src": "/galleries/soe/swg-2005.jpg"
-    },
-    {
-      "id": "swg-gallery-2006",
-      "title": "Star Wars Galaxies — Gallery",
-      "year": "2006",
-      "src": "/galleries/soe/swg-gallery-2006.jpg"
-    },
-    {
-      "id": "swg-news-2005b",
-      "title": "Star Wars Galaxies — News",
-      "year": "2005",
-      "src": "/galleries/soe/swg-news-2005b.jpg"
-    },
-    {
-      "id": "swg-players-2005",
-      "title": "Star Wars Galaxies — Players",
-      "year": "2005",
-      "src": "/galleries/soe/swg-players-2005.jpg"
-    },
-    {
-      "id": "swg-players-2007",
-      "title": "Star Wars Galaxies — Players",
-      "year": "2007",
-      "src": "/galleries/soe/swg-players-2007.jpg"
-    },
-    {
-      "id": "swg-screenshots-2005",
-      "title": "Star Wars Galaxies — Screenshots",
-      "year": "2005",
-      "src": "/galleries/soe/swg-screenshots-2005.jpg"
-    },
-  ],
+  {
+    "id": "eq-2001",
+    "title": "EverQuest — Home",
+    "year": "2001",
+    "src": "/galleries/soe/eq-2001.jpg"
+  },
+  {
+    "id": "eq-2005",
+    "title": "EverQuest — Home",
+    "year": "2005",
+    "src": "/galleries/soe/eq-2005.jpg"
+  },
+  {
+    "id": "eqplayers-2008",
+    "title": "EQ Players — Home",
+    "year": "2008",
+    "src": "/galleries/soe/eqplayers-2008.jpg"
+  },
+  {
+    "id": "eqplayers-chars-2008",
+    "title": "EQ Players — Characters",
+    "year": "2008",
+    "src": "/galleries/soe/eqplayers-chars-2008.jpg"
+  },
+  {
+    "id": "eqplayers-services-2008",
+    "title": "EQ Players — Services",
+    "year": "2008",
+    "src": "/galleries/soe/eqplayers-services-2008.jpg"
+  },
+  {
+    "id": "eq-2010",
+    "title": "EverQuest — Home",
+    "year": "2010",
+    "src": "/galleries/soe/eq-2010.jpg"
+  },
+  {
+    "id": "eq-media-2012",
+    "title": "EverQuest — Media",
+    "year": "2012",
+    "src": "/galleries/soe/eq-media-2012.jpg"
+  },
+  {
+    "id": "eq-news-2012",
+    "title": "EverQuest — News",
+    "year": "2012",
+    "src": "/galleries/soe/eq-news-2012.jpg"
+  },
+  {
+    "id": "eq-2014",
+    "title": "EverQuest — Home",
+    "year": "2014",
+    "src": "/galleries/soe/eq-2014.jpg"
+  },
+  {
+    "id": "planetside-2003",
+    "title": "PlanetSide — Home",
+    "year": "2003",
+    "src": "/galleries/soe/planetside-2003.jpg"
+  },
+  {
+    "id": "planetside-2005",
+    "title": "PlanetSide — Home",
+    "year": "2005",
+    "src": "/galleries/soe/planetside-2005.jpg"
+  },
+  {
+    "id": "swg-2003",
+    "title": "Star Wars Galaxies — Home",
+    "year": "2003",
+    "src": "/galleries/soe/swg-2003.jpg"
+  },
+  {
+    "id": "swg-2005",
+    "title": "Star Wars Galaxies — Home",
+    "year": "2005",
+    "src": "/galleries/soe/swg-2005.jpg"
+  },
+  {
+    "id": "swg-news-2005b",
+    "title": "Star Wars Galaxies — News",
+    "year": "2005",
+    "src": "/galleries/soe/swg-news-2005b.jpg"
+  },
+  {
+    "id": "swg-players-2005",
+    "title": "Star Wars Galaxies — Players",
+    "year": "2005",
+    "src": "/galleries/soe/swg-players-2005.jpg"
+  },
+  {
+    "id": "swg-screenshots-2005",
+    "title": "Star Wars Galaxies — Screenshots",
+    "year": "2005",
+    "src": "/galleries/soe/swg-screenshots-2005.jpg"
+  },
+  {
+    "id": "swg-gallery-2006",
+    "title": "Star Wars Galaxies — Gallery",
+    "year": "2006",
+    "src": "/galleries/soe/swg-gallery-2006.jpg"
+  },
+  {
+    "id": "swg-players-2007",
+    "title": "Star Wars Galaxies — Players",
+    "year": "2007",
+    "src": "/galleries/soe/swg-players-2007.jpg"
+  },
+  {
+    "id": "eq2-2008",
+    "title": "EverQuest II — Home",
+    "year": "2008",
+    "src": "/galleries/soe/eq2-2008.jpg"
+  },
+  {
+    "id": "eq2players-2008",
+    "title": "EQ2 Players",
+    "year": "2008",
+    "src": "/galleries/soe/eq2players-2008.jpg"
+  },
+  {
+    "id": "eq2-news-2010",
+    "title": "EverQuest II — News",
+    "year": "2010",
+    "src": "/galleries/soe/eq2-news-2010.jpg"
+  },
+  {
+    "id": "eq2-2012",
+    "title": "EverQuest II — Home",
+    "year": "2012",
+    "src": "/galleries/soe/eq2-2012.jpg"
+  },
+  {
+    "id": "eq2-home-2012",
+    "title": "EverQuest II — Home",
+    "year": "2012",
+    "src": "/galleries/soe/eq2-home-2012.jpg"
+  },
+  {
+    "id": "station-2005",
+    "title": "Station.com — Home",
+    "year": "2005",
+    "src": "/galleries/soe/station-2005.jpg"
+  },
+  {
+    "id": "station-2007",
+    "title": "SOE / Station — About",
+    "year": "2007",
+    "src": "/galleries/soe/station-2007.jpg"
+  },
+  {
+    "id": "station-store-2008",
+    "title": "Station Store",
+    "year": "2008",
+    "src": "/galleries/soe/station-store-2008.jpg"
+  },
+  {
+    "id": "station-2011",
+    "title": "Station.com — Home",
+    "year": "2011",
+    "src": "/galleries/soe/station-2011.jpg"
+  },
+  {
+    "id": "vanguard-players-2008",
+    "title": "Vanguard Players — Community",
+    "year": "2008",
+    "src": "/galleries/soe/vanguard-players-2008.jpg"
+  },
+  {
+    "id": "vanguard-features-2009",
+    "title": "Vanguard — Halls of the Pantheon",
+    "year": "2009",
+    "src": "/galleries/soe/vanguard-features-2009.jpg"
+  },
+  {
+    "id": "potbs-2008",
+    "title": "Pirates of the Burning Sea — Home",
+    "year": "2008",
+    "src": "/galleries/soe/potbs-2008.jpg"
+  },
+  {
+    "id": "potbs-2010",
+    "title": "Pirates of the Burning Sea — Home",
+    "year": "2010",
+    "src": "/galleries/soe/potbs-2010.jpg"
+  },
+  {
+    "id": "freerealms-2010",
+    "title": "Free Realms — Home",
+    "year": "2010",
+    "src": "/galleries/soe/freerealms-2010.jpg"
+  },
+  {
+    "id": "dcuo-2011",
+    "title": "DC Universe Online — Home",
+    "year": "2011",
+    "src": "/galleries/soe/dcuo-2011.jpg"
+  },
+  {
+    "id": "dcuo-news-2011",
+    "title": "DC Universe Online — News",
+    "year": "2011",
+    "src": "/galleries/soe/dcuo-news-2011.jpg"
+  },
+  {
+    "id": "planetside2-2012",
+    "title": "PlanetSide 2 — Home",
+    "year": "2012",
+    "src": "/galleries/soe/planetside2-2012.jpg"
+  },
+  {
+    "id": "ps2-news-2012",
+    "title": "PlanetSide 2 — News",
+    "year": "2012",
+    "src": "/galleries/soe/ps2-news-2012.jpg"
+  },
+  {
+    "id": "h1z1-2014",
+    "title": "H1Z1 — Home",
+    "year": "2014",
+    "src": "/galleries/soe/h1z1-2014.jpg"
+  }
+],
+};
+
+/** Optional per-title groupings (used on long multi-game roles like SOE) */
+export const gallerySections: Record<string, GallerySection[]> = {
+  soe: [
+  {
+    "id": "everquest",
+    "title": "EverQuest",
+    "images": [
+      {
+        "id": "eq-2001",
+        "title": "EverQuest — Home",
+        "year": "2001",
+        "src": "/galleries/soe/eq-2001.jpg"
+      },
+      {
+        "id": "eq-2005",
+        "title": "EverQuest — Home",
+        "year": "2005",
+        "src": "/galleries/soe/eq-2005.jpg"
+      },
+      {
+        "id": "eqplayers-2008",
+        "title": "EQ Players — Home",
+        "year": "2008",
+        "src": "/galleries/soe/eqplayers-2008.jpg"
+      },
+      {
+        "id": "eqplayers-chars-2008",
+        "title": "EQ Players — Characters",
+        "year": "2008",
+        "src": "/galleries/soe/eqplayers-chars-2008.jpg"
+      },
+      {
+        "id": "eqplayers-services-2008",
+        "title": "EQ Players — Services",
+        "year": "2008",
+        "src": "/galleries/soe/eqplayers-services-2008.jpg"
+      },
+      {
+        "id": "eq-2010",
+        "title": "EverQuest — Home",
+        "year": "2010",
+        "src": "/galleries/soe/eq-2010.jpg"
+      },
+      {
+        "id": "eq-media-2012",
+        "title": "EverQuest — Media",
+        "year": "2012",
+        "src": "/galleries/soe/eq-media-2012.jpg"
+      },
+      {
+        "id": "eq-news-2012",
+        "title": "EverQuest — News",
+        "year": "2012",
+        "src": "/galleries/soe/eq-news-2012.jpg"
+      },
+      {
+        "id": "eq-2014",
+        "title": "EverQuest — Home",
+        "year": "2014",
+        "src": "/galleries/soe/eq-2014.jpg"
+      }
+    ]
+  },
+  {
+    "id": "planetside",
+    "title": "PlanetSide",
+    "images": [
+      {
+        "id": "planetside-2003",
+        "title": "PlanetSide — Home",
+        "year": "2003",
+        "src": "/galleries/soe/planetside-2003.jpg"
+      },
+      {
+        "id": "planetside-2005",
+        "title": "PlanetSide — Home",
+        "year": "2005",
+        "src": "/galleries/soe/planetside-2005.jpg"
+      }
+    ]
+  },
+  {
+    "id": "swg",
+    "title": "Star Wars Galaxies",
+    "images": [
+      {
+        "id": "swg-2003",
+        "title": "Star Wars Galaxies — Home",
+        "year": "2003",
+        "src": "/galleries/soe/swg-2003.jpg"
+      },
+      {
+        "id": "swg-2005",
+        "title": "Star Wars Galaxies — Home",
+        "year": "2005",
+        "src": "/galleries/soe/swg-2005.jpg"
+      },
+      {
+        "id": "swg-news-2005b",
+        "title": "Star Wars Galaxies — News",
+        "year": "2005",
+        "src": "/galleries/soe/swg-news-2005b.jpg"
+      },
+      {
+        "id": "swg-players-2005",
+        "title": "Star Wars Galaxies — Players",
+        "year": "2005",
+        "src": "/galleries/soe/swg-players-2005.jpg"
+      },
+      {
+        "id": "swg-screenshots-2005",
+        "title": "Star Wars Galaxies — Screenshots",
+        "year": "2005",
+        "src": "/galleries/soe/swg-screenshots-2005.jpg"
+      },
+      {
+        "id": "swg-gallery-2006",
+        "title": "Star Wars Galaxies — Gallery",
+        "year": "2006",
+        "src": "/galleries/soe/swg-gallery-2006.jpg"
+      },
+      {
+        "id": "swg-players-2007",
+        "title": "Star Wars Galaxies — Players",
+        "year": "2007",
+        "src": "/galleries/soe/swg-players-2007.jpg"
+      }
+    ]
+  },
+  {
+    "id": "eq2",
+    "title": "EverQuest II",
+    "images": [
+      {
+        "id": "eq2-2008",
+        "title": "EverQuest II — Home",
+        "year": "2008",
+        "src": "/galleries/soe/eq2-2008.jpg"
+      },
+      {
+        "id": "eq2players-2008",
+        "title": "EQ2 Players",
+        "year": "2008",
+        "src": "/galleries/soe/eq2players-2008.jpg"
+      },
+      {
+        "id": "eq2-news-2010",
+        "title": "EverQuest II — News",
+        "year": "2010",
+        "src": "/galleries/soe/eq2-news-2010.jpg"
+      },
+      {
+        "id": "eq2-2012",
+        "title": "EverQuest II — Home",
+        "year": "2012",
+        "src": "/galleries/soe/eq2-2012.jpg"
+      },
+      {
+        "id": "eq2-home-2012",
+        "title": "EverQuest II — Home",
+        "year": "2012",
+        "src": "/galleries/soe/eq2-home-2012.jpg"
+      }
+    ]
+  },
+  {
+    "id": "station",
+    "title": "Station.com",
+    "images": [
+      {
+        "id": "station-2005",
+        "title": "Station.com — Home",
+        "year": "2005",
+        "src": "/galleries/soe/station-2005.jpg"
+      },
+      {
+        "id": "station-2007",
+        "title": "SOE / Station — About",
+        "year": "2007",
+        "src": "/galleries/soe/station-2007.jpg"
+      },
+      {
+        "id": "station-store-2008",
+        "title": "Station Store",
+        "year": "2008",
+        "src": "/galleries/soe/station-store-2008.jpg"
+      },
+      {
+        "id": "station-2011",
+        "title": "Station.com — Home",
+        "year": "2011",
+        "src": "/galleries/soe/station-2011.jpg"
+      }
+    ]
+  },
+  {
+    "id": "vanguard",
+    "title": "Vanguard: Saga of Heroes",
+    "images": [
+      {
+        "id": "vanguard-players-2008",
+        "title": "Vanguard Players — Community",
+        "year": "2008",
+        "src": "/galleries/soe/vanguard-players-2008.jpg"
+      },
+      {
+        "id": "vanguard-features-2009",
+        "title": "Vanguard — Halls of the Pantheon",
+        "year": "2009",
+        "src": "/galleries/soe/vanguard-features-2009.jpg"
+      }
+    ]
+  },
+  {
+    "id": "potbs",
+    "title": "Pirates of the Burning Sea",
+    "images": [
+      {
+        "id": "potbs-2008",
+        "title": "Pirates of the Burning Sea — Home",
+        "year": "2008",
+        "src": "/galleries/soe/potbs-2008.jpg"
+      },
+      {
+        "id": "potbs-2010",
+        "title": "Pirates of the Burning Sea — Home",
+        "year": "2010",
+        "src": "/galleries/soe/potbs-2010.jpg"
+      }
+    ]
+  },
+  {
+    "id": "freerealms",
+    "title": "Free Realms",
+    "images": [
+      {
+        "id": "freerealms-2010",
+        "title": "Free Realms — Home",
+        "year": "2010",
+        "src": "/galleries/soe/freerealms-2010.jpg"
+      }
+    ]
+  },
+  {
+    "id": "dcuo",
+    "title": "DC Universe Online",
+    "images": [
+      {
+        "id": "dcuo-2011",
+        "title": "DC Universe Online — Home",
+        "year": "2011",
+        "src": "/galleries/soe/dcuo-2011.jpg"
+      },
+      {
+        "id": "dcuo-news-2011",
+        "title": "DC Universe Online — News",
+        "year": "2011",
+        "src": "/galleries/soe/dcuo-news-2011.jpg"
+      }
+    ]
+  },
+  {
+    "id": "planetside2",
+    "title": "PlanetSide 2",
+    "images": [
+      {
+        "id": "planetside2-2012",
+        "title": "PlanetSide 2 — Home",
+        "year": "2012",
+        "src": "/galleries/soe/planetside2-2012.jpg"
+      },
+      {
+        "id": "ps2-news-2012",
+        "title": "PlanetSide 2 — News",
+        "year": "2012",
+        "src": "/galleries/soe/ps2-news-2012.jpg"
+      }
+    ]
+  },
+  {
+    "id": "h1z1",
+    "title": "H1Z1",
+    "images": [
+      {
+        "id": "h1z1-2014",
+        "title": "H1Z1 — Home",
+        "year": "2014",
+        "src": "/galleries/soe/h1z1-2014.jpg"
+      }
+    ]
+  }
+],
 };

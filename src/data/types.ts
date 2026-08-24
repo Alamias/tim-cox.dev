@@ -4,3 +4,9 @@ export type GalleryImage = {
   year: string;
   src: string;
 };
+
+export type GallerySection = {
+  id: string;
+  title: string;
+  images: GalleryImage[];
+};

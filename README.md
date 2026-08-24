@@ -34,6 +34,8 @@ In **Workers Builds** settings, set:
 
 Do **not** use `npm run build` as the CF build command alone — that only runs `next build` and will not create `.open-next/worker.js`.
 
+`WORKER_SELF_REFERENCE` is intentionally omitted from `wrangler.jsonc` (not needed for this static site, and a bad service name previously broke deploys).
+
 ## Site map
 
 - `/` — Home

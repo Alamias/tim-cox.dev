@@ -8,13 +8,6 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "services": [
-    {
-      "binding": "WORKER_SELF_REFERENCE",
-      // Must match "name" above
-      "service": "tim-cox-dev"
-    }
-  ],
   "images": {
     "binding": "IMAGES"
   },

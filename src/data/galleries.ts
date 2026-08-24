@@ -678,6 +678,48 @@ export const galleries: Record<string, GalleryImage[]> = {
     "src": "/galleries/soe/eq2-home-2012.jpg"
   },
   {
+    "id": "stationexchange-2005",
+    "title": "Station Exchange — Intro",
+    "year": "2005",
+    "src": "/galleries/soe/stationexchange-2005.jpg"
+  },
+  {
+    "id": "stationexchange-eq2-2005",
+    "title": "Station Exchange — Marketplace",
+    "year": "2005",
+    "src": "/galleries/soe/stationexchange-eq2-2005.jpg"
+  },
+  {
+    "id": "stationexchange-browse-select-2006",
+    "title": "Station Exchange — Browse",
+    "year": "2006",
+    "src": "/galleries/soe/stationexchange-browse-select-2006.jpg"
+  },
+  {
+    "id": "stationexchange-browse-chars-2006",
+    "title": "Station Exchange — Browse Characters",
+    "year": "2006",
+    "src": "/galleries/soe/stationexchange-browse-chars-2006.jpg"
+  },
+  {
+    "id": "stationexchange-search-2006",
+    "title": "Station Exchange — Search",
+    "year": "2006",
+    "src": "/galleries/soe/stationexchange-search-2006.jpg"
+  },
+  {
+    "id": "stationexchange-browse-coin-2006",
+    "title": "Station Exchange — Browse Coin",
+    "year": "2006",
+    "src": "/galleries/soe/stationexchange-browse-coin-2006.jpg"
+  },
+  {
+    "id": "stationexchange-livegamer-2008",
+    "title": "Station Exchange — Live Gamer Transition",
+    "year": "2008",
+    "src": "/galleries/soe/stationexchange-livegamer-2008.jpg"
+  },
+  {
     "id": "station-2005",
     "title": "Station.com — Home",
     "year": "2005",
@@ -926,6 +968,54 @@ export const gallerySections: Record<string, GallerySection[]> = {
         "title": "EverQuest II — Home",
         "year": "2012",
         "src": "/galleries/soe/eq2-home-2012.jpg"
+      }
+    ]
+  },
+  {
+    "id": "stationexchange",
+    "title": "Station Exchange",
+    "images": [
+      {
+        "id": "stationexchange-2005",
+        "title": "Station Exchange — Intro",
+        "year": "2005",
+        "src": "/galleries/soe/stationexchange-2005.jpg"
+      },
+      {
+        "id": "stationexchange-eq2-2005",
+        "title": "Station Exchange — Marketplace",
+        "year": "2005",
+        "src": "/galleries/soe/stationexchange-eq2-2005.jpg"
+      },
+      {
+        "id": "stationexchange-browse-select-2006",
+        "title": "Station Exchange — Browse",
+        "year": "2006",
+        "src": "/galleries/soe/stationexchange-browse-select-2006.jpg"
+      },
+      {
+        "id": "stationexchange-browse-chars-2006",
+        "title": "Station Exchange — Browse Characters",
+        "year": "2006",
+        "src": "/galleries/soe/stationexchange-browse-chars-2006.jpg"
+      },
+      {
+        "id": "stationexchange-search-2006",
+        "title": "Station Exchange — Search",
+        "year": "2006",
+        "src": "/galleries/soe/stationexchange-search-2006.jpg"
+      },
+      {
+        "id": "stationexchange-browse-coin-2006",
+        "title": "Station Exchange — Browse Coin",
+        "year": "2006",
+        "src": "/galleries/soe/stationexchange-browse-coin-2006.jpg"
+      },
+      {
+        "id": "stationexchange-livegamer-2008",
+        "title": "Station Exchange — Live Gamer Transition",
+        "year": "2008",
+        "src": "/galleries/soe/stationexchange-livegamer-2008.jpg"
       }
     ]
   },

@@ -227,6 +227,7 @@ export const experiences: Experience[] = [
       'PlanetSide',
       'Star Wars Galaxies',
       'EverQuest II',
+      'Station Exchange',
       'Vanguard',
       'Pirates of the Burning Sea',
       'Free Realms',

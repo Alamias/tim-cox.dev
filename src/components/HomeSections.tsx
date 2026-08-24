@@ -6,8 +6,6 @@ import { ExperienceCard } from "@/components/ExperienceCard";
 import { experiences, profile } from "@/data/experience";
 
 export function HomeSections() {
-  const featured = experiences.slice(0, 3);
-
   return (
     <>
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
@@ -19,7 +17,7 @@ export function HomeSections() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-              Selected work
+              Work
             </p>
             <h2 className="font-display mt-2 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
               Places that shaped the craft
@@ -35,13 +33,13 @@ export function HomeSections() {
               href="/work"
               className="text-sm font-semibold text-accent transition hover:text-accent-deep"
             >
-              All experience →
+              Company pages →
             </Link>
           </motion.div>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2">
-          {featured.map((exp, index) => (
+          {experiences.map((exp, index) => (
             <ExperienceCard key={exp.slug} experience={exp} index={index} />
           ))}
         </div>

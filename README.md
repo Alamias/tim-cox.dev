@@ -23,18 +23,25 @@ Open [http://localhost:3000](http://localhost:3000).
 This site deploys to Cloudflare Workers via `@opennextjs/cloudflare`.
 
 ```bash
-npm run build:worker   # next build + OpenNext adapter → .open-next/worker.js
-npm run deploy         # build:worker + wrangler deploy
+npm run build:worker   # next build + OpenNext adapter → .open-next/
+npm run deploy         # build:worker + opennext deploy
 ```
 
-In **Workers Builds** settings, set:
+### Workers Builds (dashboard) — required settings
 
-- **Build command:** `npm run build:worker`
-- **Deploy command:** `npx wrangler deploy`
+Cloudflare’s defaults (`npm run build` + `npx wrangler deploy`) **will fail** for OpenNext.
 
-Do **not** use `npm run build` as the CF build command alone — that only runs `next build` and will not create `.open-next/worker.js`.
+In **Workers → your worker → Settings → Build**, set:
 
-`WORKER_SELF_REFERENCE` is intentionally omitted from `wrangler.jsonc` (not needed for this static site, and a bad service name previously broke deploys).
+| Field | Value |
+| --- | --- |
+| **Build command** | `npm run build:worker` |
+| **Deploy command** | `npx opennextjs-cloudflare deploy` |
+| **Non-production deploy** | `npx opennextjs-cloudflare upload` |
+
+Do **not** leave Build as `npm run build` — that only runs Next.js and skips `.open-next/.build/open-next.config.edge.mjs`, which causes:
+
+`Could not find compiled Open Next config, did you run the build command?`
 
 ## Site map
 

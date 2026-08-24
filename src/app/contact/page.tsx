@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
 import { profile } from "@/data/experience";
+import { pageMetadata } from "@/data/seo";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Get in touch with Tim Cox about Senior Frontend opportunities.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Contact — Hire a Frontend Developer",
+  description:
+    "Tim Cox is a senior frontend developer looking for work. Reach out about React, Next.js, and TypeScript roles—remote or hybrid near Ontario, California.",
+  path: "/contact",
+  keywords: [
+    "hire Tim Cox",
+    "hire frontend developer",
+    "contact senior frontend engineer",
+    "React developer for hire",
+    "Next.js developer California",
+    "frontend developer looking for work",
+  ],
+});
 
 export default function ContactPage() {
   return (

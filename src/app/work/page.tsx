@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { experiences } from "@/data/experience";
+import { pageMetadata } from "@/data/seo";
 
-export const metadata: Metadata = {
-  title: "Work",
+export const metadata: Metadata = pageMetadata({
+  title: "Frontend Developer Work",
   description:
-    "Career highlights across Intrepid Studios, Ambry Genetics, NetBrains, Disney, and Sony Online Entertainment—with site screenshot galleries.",
-};
+    "Portfolio of Tim Cox, a senior frontend developer open to work. React, Next.js, and TypeScript at Intrepid, Ambry, Disney, and Sony Online Entertainment.",
+  path: "/work",
+  keywords: [
+    "frontend developer portfolio",
+    "React developer work",
+    "Next.js projects",
+    "TypeScript frontend engineer",
+    "Intrepid Studios",
+    "Sony Online Entertainment",
+  ],
+});
 
 export default function WorkPage() {
   return (

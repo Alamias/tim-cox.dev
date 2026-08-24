@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { resume, resumeFiles } from "@/data/resume";
+import { pageMetadata } from "@/data/seo";
 
-export const metadata: Metadata = {
-  title: "Resume",
+export const metadata: Metadata = pageMetadata({
+  title: "Frontend Developer Resume",
   description:
-    "Resume for Tim Cox — Senior Frontend Engineer. Download PDF or DOCX.",
-};
+    "Resume for Tim Cox, senior frontend developer open to work. 20+ years with React, Next.js, and TypeScript. Download PDF or DOCX.",
+  path: "/resume",
+  keywords: [
+    "Tim Cox resume",
+    "frontend developer resume",
+    "senior frontend engineer resume",
+    "React developer CV",
+    "Next.js TypeScript resume",
+    "frontend developer looking for work",
+  ],
+});
 
 export default function ResumePage() {
   return (

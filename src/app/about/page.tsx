@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { profile } from "@/data/experience";
+import { pageMetadata } from "@/data/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About",
-  description: "About Tim Cox — Senior Frontend Engineer based in Ontario, California.",
-};
+  description:
+    "About Tim Cox, a senior frontend developer in Ontario, California, open to work. React, Next.js, TypeScript, and scalable UI architecture.",
+  path: "/about",
+  keywords: [
+    "about Tim Cox",
+    "Tim Cox developer",
+    "frontend developer California",
+    "React Next.js TypeScript engineer",
+    "senior frontend developer Ontario",
+  ],
+});
 
 export default function AboutPage() {
   return (

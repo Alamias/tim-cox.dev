@@ -28,7 +28,7 @@ export const profile = {
   tagline:
     'Twenty-plus years building web platforms for games, medical, and entertainment—React, Next.js, and TypeScript at scale.',
   about: [
-    'I’m a Senior Frontend Engineer with 20+ years of experience building scalable applications used by thousands of users. I specialize in React, Next.js, and TypeScript, with a focus on frontend architecture, performance optimization, and maintainable UI systems.',
+    'I’m a Senior Frontend Engineer with 20+ years of experience building scalable applications used by billions of users. I specialize in React, Next.js, and TypeScript, with a focus on frontend architecture, performance optimization, and maintainable UI systems.',
     'At Intrepid Studios I architected and led development across the Ashes of Creation customer-facing site and internal tools, modernizing legacy systems into scalable React platforms. Earlier, at Sony Online Entertainment, I shipped marketing, e-commerce, and account systems for EverQuest, DC Universe Online, PlanetSide 2, and more—including A/B tests that lifted engagement by about 30%.',
     'I own frontend systems end to end—from architecture through production—partnering with product, UX, and backend teams to ship reliable, performant experiences.',
   ],
@@ -202,7 +202,7 @@ export const experiences: Experience[] = [
     end: '2015',
     period: 'Jun 1999 – Feb 2015',
     summary:
-      'Nearly sixteen years building marketing, e-commerce, registration, and account platforms for SOE’s MMO portfolio—EverQuest, EverQuest II, Star Wars Galaxies, Vanguard, PlanetSide 2, DC Universe Online, and more.',
+      'Nearly sixteen years building marketing, e-commerce, registration, and account platforms for SOE’s MMO portfolio—EverQuest, EverQuest II, Star Wars Galaxies, Vanguard, PlanetSide 2, DC Universe Online, and more serving over a billion page views for millions of users during that time.',
     highlights: [
       'Shipped customer-facing and backend apps for marketing, storefronts, and account management across SOE’s catalog.',
       'Drove A/B-tested registration and retention flows that improved engagement (~30% in key experiments).',

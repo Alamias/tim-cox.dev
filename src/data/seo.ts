@@ -17,6 +17,7 @@ export const site = {
   location: profile.location,
   email: profile.email,
   linkedin: profile.linkedin,
+  github: profile.github,
   keywords: [
     "Tim Cox",
     "Tim Cox frontend developer",
@@ -137,7 +138,7 @@ export function personJsonLd() {
             addressCountry: "US",
           },
         },
-        sameAs: [site.linkedin],
+        sameAs: [site.linkedin, site.github],
         knowsLanguage: "en",
         knowsAbout: [
           "Frontend development",

@@ -46,6 +46,15 @@ export default function ResumePage() {
         >
           {resume.linkedinLabel}
         </a>
+        <span className="hidden sm:inline"> · </span>
+        <a
+          href={resume.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:text-accent-deep"
+        >
+          {resume.githubLabel}
+        </a>
       </p>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

@@ -12,7 +12,7 @@ export const site = {
   title: "Tim Cox — Senior Frontend Developer for Hire | React, Next.js",
   titleShort: "Tim Cox — Senior Frontend Developer",
   description:
-    "Tim Cox is a senior frontend developer open to work. 20+ years with React, Next.js, and TypeScript. Seeking remote or hybrid roles near Ontario, California.",
+    "Tim Cox is a senior frontend developer open to work. 15+ years with React, Next.js, and TypeScript. Seeking remote or hybrid roles near Ontario, California.",
   locale: "en_US",
   location: profile.location,
   email: profile.email,

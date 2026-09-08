@@ -6,7 +6,7 @@ import { pageMetadata } from "@/data/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Frontend Developer Resume",
   description:
-    "Resume for Tim Cox, senior frontend developer open to work. 20+ years with React, Next.js, and TypeScript. Download PDF or DOCX.",
+    "Resume for Tim Cox, senior frontend engineer open to work. 15+ years with React, Next.js, and TypeScript. Download PDF or DOCX.",
   path: "/resume",
   keywords: [
     "Tim Cox resume",
@@ -17,6 +17,8 @@ export const metadata: Metadata = pageMetadata({
     "frontend developer looking for work",
   ],
 });
+
+const phoneHref = `tel:+1${resume.phone.replace(/\D/g, "")}`;
 
 export default function ResumePage() {
   return (
@@ -30,6 +32,10 @@ export default function ResumePage() {
       <p className="mt-2 text-lg text-ink-muted">{resume.title}</p>
       <p className="mt-3 flex flex-col gap-1 text-sm text-ink-faint sm:block">
         {resume.location}
+        <span className="hidden sm:inline"> · </span>
+        <a href={phoneHref} className="text-accent hover:text-accent-deep">
+          {resume.phone}
+        </a>
         <span className="hidden sm:inline"> · </span>
         <a
           href={`mailto:${resume.email}`}
@@ -45,6 +51,13 @@ export default function ResumePage() {
           className="text-accent hover:text-accent-deep"
         >
           {resume.linkedinLabel}
+        </a>
+        <span className="hidden sm:inline"> · </span>
+        <a
+          href={resume.website}
+          className="text-accent hover:text-accent-deep"
+        >
+          {resume.websiteLabel}
         </a>
       </p>
 
@@ -83,7 +96,25 @@ export default function ResumePage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-display text-xl font-semibold text-ink">Skills</h2>
+        <h2 className="font-display text-xl font-semibold text-ink">
+          Areas of focus
+        </h2>
+        <ul className="mt-4 flex flex-wrap gap-2">
+          {resume.focusAreas.map((area) => (
+            <li
+              key={area}
+              className="rounded-md border border-line bg-canvas px-3 py-1.5 text-sm font-medium text-ink"
+            >
+              {area}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="font-display text-xl font-semibold text-ink">
+          Technical skills
+        </h2>
         <div className="mt-5 space-y-5">
           {resume.skillGroups.map((group) => (
             <div key={group.label}>
@@ -118,37 +149,37 @@ export default function ResumePage() {
                 </h3>
                 <p className="text-sm text-ink-faint">{job.period}</p>
               </div>
-              {("location" in job && job.location) || ("note" in job && job.note) ? (
-                <p className="mt-1 text-sm text-ink-faint">
-                  {[
-                    "location" in job ? job.location : "",
-                    "note" in job ? job.note : "",
-                  ]
-                    .filter(Boolean)
-                    .join(" · ")}
-                </p>
+              {job.location ? (
+                <p className="mt-1 text-sm text-ink-faint">{job.location}</p>
               ) : null}
               <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                 {job.blurb}
               </p>
               <div className="mt-5 space-y-6">
-                {job.roles.map((role) => (
-                  <div
-                    key={`${job.company}-${role.title}-${"period" in role ? role.period : ""}`}
-                  >
-                    <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
-                      <p className="font-semibold text-ink">{role.title}</p>
-                      {"period" in role && role.period ? (
-                        <p className="text-sm text-ink-faint">{role.period}</p>
+                {job.roles.map((role, roleIndex) => {
+                  const title = "title" in role ? role.title : undefined;
+                  const period = "period" in role ? role.period : undefined;
+
+                  return (
+                    <div key={`${job.company}-${title ?? "role"}-${period ?? roleIndex}`}>
+                      {title || period ? (
+                        <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
+                          {title ? (
+                            <p className="font-semibold text-ink">{title}</p>
+                          ) : null}
+                          {period ? (
+                            <p className="text-sm text-ink-faint">{period}</p>
+                          ) : null}
+                        </div>
                       ) : null}
+                      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-ink-muted">
+                        {role.bullets.map((bullet) => (
+                          <li key={bullet.slice(0, 48)}>{bullet}</li>
+                        ))}
+                      </ul>
                     </div>
-                    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-ink-muted">
-                      {role.bullets.map((bullet) => (
-                        <li key={bullet.slice(0, 48)}>{bullet}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </article>
           ))}

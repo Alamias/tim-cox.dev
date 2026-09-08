@@ -26,9 +26,9 @@ export const profile = {
   title: 'Senior Frontend Engineer',
   location: 'Ontario, California',
   tagline:
-    'Twenty-plus years building and deploying production web platforms for gaming, medical, and entertainment companies, used by millions of users—React, Next.js, and TypeScript at scale.',
+    '15+ years building and deploying production web platforms for gaming, medical, and entertainment companies, used by millions of users—React, Next.js, and TypeScript at scale.',
   about: [
-    'I’m a Senior Frontend Engineer with 20+ years of experience building scalable applications used by billions of users. I specialize in React, Next.js, and TypeScript, with a focus on frontend architecture, performance optimization, and maintainable UI systems.',
+    'I’m a Senior Frontend Engineer with 15+ years of experience building scalable applications used by billions of users. I specialize in React, Next.js, and TypeScript, with a focus on frontend architecture, performance optimization, and maintainable UI systems.',
     'At Intrepid Studios I architected and led development across the Ashes of Creation customer-facing site and internal tools, modernizing legacy systems into scalable React platforms. Earlier, at Sony Online Entertainment, I shipped marketing, e-commerce, and account systems for EverQuest, DC Universe Online, PlanetSide 2, and more—including A/B tests that lifted engagement by about 30%.',
     'I own frontend systems end to end—from architecture through production—partnering with product, UX, and backend teams to ship reliable, performant experiences.',
   ],

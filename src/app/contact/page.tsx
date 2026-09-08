@@ -43,6 +43,18 @@ export default function ContactPage() {
           <p className="mt-1 text-sm text-ink-muted">Best place for roles and intros</p>
         </a>
         <a
+          href={profile.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-xl border border-line bg-canvas-deep/80 p-6 transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-canvas-deep hover:shadow-lg hover:shadow-accent/10"
+        >
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-faint">
+            GitHub
+          </p>
+          <p className="mt-2 font-display text-xl font-semibold text-ink">@Alamias</p>
+          <p className="mt-1 text-sm text-ink-muted">Code, experiments, and open source</p>
+        </a>
+        <a
           href={`mailto:${profile.email}`}
           className="rounded-xl border border-line bg-canvas-deep/80 p-6 transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-canvas-deep hover:shadow-lg hover:shadow-accent/10"
         >
@@ -58,7 +70,7 @@ export default function ContactPage() {
         </a>
         <a
           href="/resume"
-          className="rounded-xl border border-line bg-canvas-deep/80 p-6 transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-canvas-deep hover:shadow-lg hover:shadow-accent/10 sm:col-span-2"
+          className="rounded-xl border border-line bg-canvas-deep/80 p-6 transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-canvas-deep hover:shadow-lg hover:shadow-accent/10"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-faint">
             Resume

@@ -54,6 +54,15 @@ export default function ResumePage() {
         </a>
         <span className="hidden sm:inline"> · </span>
         <a
+          href={resume.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:text-accent-deep"
+        >
+          {resume.githubLabel}
+        </a>
+        <span className="hidden sm:inline"> · </span>
+        <a
           href={resume.website}
           className="text-accent hover:text-accent-deep"
         >

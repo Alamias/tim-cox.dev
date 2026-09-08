@@ -27,6 +27,7 @@ export function SiteFooter() {
             { href: "/about", label: "About" },
             { href: "/contact", label: "Contact" },
             { href: profile.linkedin, label: "LinkedIn", external: true },
+            { href: profile.github, label: "GitHub", external: true },
           ].map((link) =>
             link.external ? (
               <a

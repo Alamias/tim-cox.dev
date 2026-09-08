@@ -34,6 +34,7 @@ export const profile = {
   ],
   email: 'timcox6772@gmail.com',
   linkedin: 'https://www.linkedin.com/in/tim-cox-49788a1',
+  github: 'https://github.com/Alamias',
   skills: [
     'React',
     'Next.js',
@@ -50,7 +51,7 @@ export const profile = {
   ],
   education: {
     school: 'Biola University',
-    focus: 'Communications',
+    focus: 'Coursework in Communications',
     years: '1990 – 1996',
   },
 };

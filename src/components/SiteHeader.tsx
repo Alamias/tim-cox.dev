@@ -23,17 +23,17 @@ export function SiteHeader() {
   const { scrollY } = useScroll();
   const [compact, setCompact] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [prevPathname, setPrevPathname] = useState(pathname);
   const menuId = useId();
 
   useMotionValueEvent(scrollY, 'change', (y) => {
     setCompact(y > 24);
   });
 
-  useEffect(() => {
-    setTimeout(() => {
-      setMenuOpen(false);
-    }, 0);
-  }, [pathname]);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setMenuOpen(false);
+  }
 
   useEffect(() => {
     if (!menuOpen) return;

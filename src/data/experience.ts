@@ -1,6 +1,13 @@
 import { galleries, gallerySections } from './galleries';
 import type { GalleryImage, GallerySection } from './types';
 
+export type CaseStudy = {
+  title: string;
+  problem: string;
+  changes: string;
+  result: string;
+};
+
 export type Experience = {
   slug: string;
   company: string;
@@ -15,6 +22,7 @@ export type Experience = {
   highlights: string[];
   stack: string[];
   titles?: string[];
+  caseStudies?: CaseStudy[];
   accent: string;
   gallery: GalleryImage[];
   /** When set, work page renders gallery broken into titled groups */
@@ -28,7 +36,7 @@ export const profile = {
   tagline:
     '15+ years building and deploying production web platforms for gaming, medical, and entertainment companies, used by millions of users—React, Next.js, and TypeScript at scale.',
   about: [
-    'I’m a Senior Frontend Engineer with 15+ years of experience building scalable applications used by billions of users. I specialize in React, Next.js, and TypeScript, with a focus on frontend architecture, performance optimization, and maintainable UI systems.',
+    'I’m a Senior Frontend Engineer with 15+ years of experience building scalable applications used by millions of people and serving billions of page views. I specialize in React, Next.js, and TypeScript, with a focus on frontend architecture, performance optimization, and maintainable UI systems.',
     'At Intrepid Studios I architected and led development across the Ashes of Creation customer-facing site and internal tools, modernizing legacy systems into scalable React platforms. Earlier, at Sony Online Entertainment, I shipped marketing, e-commerce, and account systems for EverQuest, DC Universe Online, PlanetSide 2, and more—including A/B tests that lifted engagement by about 30%.',
     'I own frontend systems end to end—from architecture through production—partnering with product, UX, and backend teams to ship reliable, performant experiences.',
   ],
@@ -94,6 +102,35 @@ export const experiences: Experience[] = [
       'CI/CD',
     ],
     titles: ['Ashes of Creation'],
+    caseStudies: [
+      {
+        title: 'Reworking the news experience',
+        problem:
+          'The news experience had duplicated code and too much information being shown at once. We also knew some news content needed to be surfaced on other parts of the site, including the homepage.',
+        changes:
+          'I pulled repeated UI into shared components and created reusable content sections that could be used across multiple pages. I reorganized the page and moved lower-priority information into dropdowns and hidden sections to make the main experience easier to scan.',
+        result:
+          'The implementation became easier to maintain, content could be reused across multiple pages, and filtering and search became cleaner.',
+      },
+      {
+        title: 'Improving page and image performance',
+        problem:
+          'Initial page loads and image loading were slower than we wanted.',
+        changes:
+          'I improved delivery using AWS CloudFront, Next.js image optimization, and lazy loading for images and content below the fold.',
+        result:
+          'I verified the changes using Chrome DevTools, especially the Network tab, along with Lighthouse. Across the site, these changes contributed to roughly a 35–45% overall performance improvement and made the initial experience noticeably faster.',
+      },
+      {
+        title: 'Building a reusable UI system',
+        problem:
+          'We wanted the UI to be more consistent and needed reusable building blocks so future pages did not have to start from scratch.',
+        changes:
+          'I helped build a shared component library based on our Figma designs, including buttons, inputs, cards, modals, navigation, typography, and layout patterns. When a design was difficult to make responsive, I worked directly with the designer to review options and find an approach that worked better across screen sizes.',
+        result:
+          'The shared system made the UI more consistent and helped us build new pages faster by plugging in existing components instead of recreating the same patterns.',
+      },
+    ],
     accent: '#1d6b5c',
     gallery: galleries.intrepid ?? [],
   },

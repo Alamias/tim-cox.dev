@@ -168,6 +168,58 @@ export default async function ExperiencePage({ params }: Props) {
         </aside>
       </div>
 
+      {exp.caseStudies && exp.caseStudies.length > 0 && (
+        <section className='border-t border-line'>
+          <div className='site-gutter mx-auto max-w-6xl py-12 sm:py-16'>
+            <h2 className='font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl'>
+              Selected work
+            </h2>
+            <p className='mt-3 max-w-2xl text-ink-muted'>
+              A few examples of the problems I worked through and what changed as
+              a result.
+            </p>
+            <div className='mt-8 grid gap-6 lg:grid-cols-3'>
+              {exp.caseStudies.map((caseStudy) => (
+                <article
+                  key={caseStudy.title}
+                  className='rounded-xl border border-line bg-canvas-deep p-6'
+                >
+                  <h3 className='font-display text-xl font-semibold text-ink'>
+                    {caseStudy.title}
+                  </h3>
+                  <div className='mt-6 space-y-5'>
+                    <div>
+                      <p className='text-xs font-semibold uppercase tracking-[0.18em] text-accent'>
+                        Problem
+                      </p>
+                      <p className='mt-2 leading-relaxed text-ink-muted'>
+                        {caseStudy.problem}
+                      </p>
+                    </div>
+                    <div>
+                      <p className='text-xs font-semibold uppercase tracking-[0.18em] text-accent'>
+                        What I changed
+                      </p>
+                      <p className='mt-2 leading-relaxed text-ink-muted'>
+                        {caseStudy.changes}
+                      </p>
+                    </div>
+                    <div>
+                      <p className='text-xs font-semibold uppercase tracking-[0.18em] text-accent'>
+                        Result
+                      </p>
+                      <p className='mt-2 leading-relaxed text-ink-muted'>
+                        {caseStudy.result}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className='border-t border-line bg-canvas-deep/40'>
         <div className='site-gutter mx-auto max-w-6xl py-12 sm:py-16'>
           <p className='text-xs font-semibold uppercase tracking-[0.16em] text-accent sm:text-sm sm:tracking-[0.2em]'>
